@@ -1,5 +1,8 @@
 <script>
   import { obterDatos } from "./lib/fetchs.mjs";
+
+  // let promesaDatos = obterDatos()
+
   let datos
 
   function manexadorClick(params) {
@@ -18,7 +21,7 @@
 <button on:click={manexadorClick}>Obter datos</button>
 
 <!--
-{#await datos}
+{#await promesaDatos}
 	<p>...pedindo datos</p>
 {:then datosRecibidos}
 	<p>{datosRecibidos.datos}</p>
